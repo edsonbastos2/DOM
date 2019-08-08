@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div class="inicio">
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+       const lista = document.querySelector('div ul')
+       console.log(lista.parentNode) // Traz o parente de um nivél acima, o elemento pai
+       console.log(lista.childNodes) // Traz os nós filhos
+
+       const primeiro = lista.firstChild // Traz o primeiro elemento da lista
+       console.log(primeiro)
+       console.log(primeiro.nextSibling) // Traz o proximo elemento do primeiro elemento
+
+       const ultimo = lista.lastChild // Traz o ultimo elemento da sua lista
+       console.log(ultimo)
+       console.log(ultimo.previousSibling) // Traz o elemento anterior do ultimo elemento
+
+       console.log(lista.firstElementChild) // Traz realmente o primeiro elemento da sua lista
+       console.log(lista.lastElementChild) // Traz realmente o ultimo elemento da sua lista
+
+       console.log(lista.parentNode.previousElementSibling) // Traz o parente anterior
+       console.log(lista.parentNode.nextElementSibling) // Traz o ultimo parente
+       console.log(lista.children) // Traz os filhos de uma lista
+
+       console.log(document.querySelector('.inicio p'))
+       const lista2 = document.querySelectorAll('div ul li')
+       Array.from(lista2)
+    </script>
+</body>
+
+</html>

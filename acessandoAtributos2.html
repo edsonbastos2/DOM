@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5" data-blbla="opa">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+       const lista = document.querySelector('#compras')
+       console.log(lista.childNodes) // pega os nós filhos
+       console.log(lista.destino) // 
+       console.log(lista.id) // pega o valor 
+       console.log(lista.getAttribute('destino')) // pega o valor do atributo
+       lista.setAttribute('destino', 'empresa') // altera um valor no atributo
+       console.log(lista.hasAttribute('destino')) // para saber se o atributo existi
+       console.log(lista.dataset.urgencia) // mostra o valor dos atributos
+       console.log(lista.dataset) // mostra todos os atributos
+       lista.dataset.urgencia = 4 // altera o valor dos 
+       lista.removeAttribute('data-blbla')
+
+       const Label = document.querySelector('label')
+       console.log(Label.for)
+       console.log(Label.htmlFor)
+       console.log(Label.getAttribute('for'))
+       Label.setAttribute('for', 'lista')
+    </script>
+</body>
+
+</html>
